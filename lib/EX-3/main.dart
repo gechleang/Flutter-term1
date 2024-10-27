@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: const Color.fromARGB(255, 236, 161, 161),
         body: Center(
           child: Container(
             padding: const EdgeInsets.all(16.0),
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.blue[100],
+                    color: const Color.fromARGB(255, 96, 96, 97),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                     child: Text(
                       'OOP',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 86, 58, 58),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.blue[300],
+                    color: const Color.fromARGB(255, 41, 137, 216),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                     child: Text(
                       'DART',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 184, 100, 100),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.blue[300]!, Colors.blue[600]!],
+                      colors: [const Color.fromARGB(255, 214, 218, 222)!, const Color.fromARGB(255, 201, 43, 143)!],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
                     child: Text(
                       'FLUTTER',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 23, 23, 23),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
