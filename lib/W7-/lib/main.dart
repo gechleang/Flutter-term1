@@ -5,12 +5,12 @@ import 'model/quiz.dart';
 void main() {
 
   Question q1 = const Question(
-      title: "Who is the best teacher?",
-      possibleAnswers: ["ronan", "hongly", 'leangsiv'],
-      goodAnswer: 'ronan');
+      title: "How are u",
+      possibleAnswers: ["Good", "Not really", 'Ok'],
+      goodAnswer: 'Good');
   Question q2 = const Question(
-      title: "Which color is the best?",
-      possibleAnswers: ["blue", "red", 'green'],
+      title: "Which color is Your favourite?",
+      possibleAnswers: ["Pink", "Purple", 'yellow'],
       goodAnswer: 'red');
 
   List<Question> myQuestions = [q1, q2];
