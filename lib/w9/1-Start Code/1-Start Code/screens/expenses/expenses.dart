@@ -7,6 +7,14 @@ import 'expenses_list.dart';
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
 
+  DateTime get date => null;
+
+  String get title => null;
+
+  get amount => null;
+
+  get category => null;
+
   @override
   State<Expenses> createState() {
     return _ExpensesState();

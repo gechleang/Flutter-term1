@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
+import 'package:test1/w9/1-Start%20Code/1-Start%20Code/screens/expenses/expenses.dart';
 import '../../models/expense.dart';
 
 class ExpenseItem extends StatelessWidget {
   ExpenseItem(this.expense, {super.key});
 
-  final Expense expense;
+  final Expenses expense;
   final formatter = DateFormat.yMd();
 
   String get formatedDate =>
-      formatter.format(expense.date); // We format the date DD/MM/YYYY
+      formatter.format(expense.date); 
 
   @override
   Widget build(BuildContext context) {

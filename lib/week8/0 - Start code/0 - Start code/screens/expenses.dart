@@ -1,19 +1,58 @@
-import 'package:uuid/uuid.dart';
+import 'package:flutter/material.dart';
+import 'package:test1/w9/1-Start%20Code/1-Start%20Code/models/expense.dart';
+import 'package:test1/week8/0%20-%20Start%20code/0%20-%20Start%20code/screens/expensesForm.dart';
+import '../../models/expense.dart';
+import 'expenses_list.dart';
 
-enum ExpenseType { FOOD, TRAVEL, LEISURE, WORK }
+class Expenses extends StatefulWidget {
+  const Expenses({super.key});
 
-class Expense {
-  final String id;
-  final String title;
-  final double amount;
-  final DateTime date;
-  final ExpenseType category;
-
-  Expense.create({
-    required this.title,
-    required this.amount,
-    required this.date,
-    required this.category,
-  }) : id = const Uuid().v4();
+  @override
+  State<Expenses> createState() {
+    return _ExpensesState();
+  }
 }
 
+class _ExpensesState extends State<Expenses> {
+  final List<Expense> _registeredExpenses = [
+    Expense(
+      title: 'Flutter Course',
+      amount: 19.99,
+      date: DateTime.now(),
+      category: Category.work,
+    ),
+    Expense(
+      title: 'Cinema',
+      amount: 15.69,
+      date: DateTime.now(),
+      category: Category.leisure,
+    ),
+  ];
+ 
+
+  void onAddPressed() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => const ExpenseForm(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue[100],
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: onAddPressed,
+          )
+        ],
+        backgroundColor: Colors.blue[700],
+        title: const Text('Ronan-The-Best Expenses App'),
+      ),
+      body: ExpensesList(expenses: _registeredExpenses),
+    );
+  }
+}
